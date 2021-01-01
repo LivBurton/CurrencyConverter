@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3116385fbd.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <div class="top-heading">
+      <h1>Currency Converter</h1>
+    </div>
+    <div class="container">
+      <div class="inner-container">
+        <div class="img-div">
+          <img src="/img/symbol.png" id="pound-img" />
+        </div>
+
+        <p id="action">Search by country or currency</p>
+        <div class="btn-container">
+          <button class="btn" id="btn-country">Country</button>
+          <button class="btn" id="btn-select-currency">Currency</button>
+        </div>
+
+        <div class="enter-country">
+          <div class="countries-container">
+            <!-- input country -->
+            <div class="enter-each">
+              <div id="input1-div">
+                <label for="input-country1">From</label>
+              </div>
+
+              <input
+                id="input-country1"
+                type="text"
+                name="country"
+                list="country-name1"
+                placeholder="Select country"
+                onfocus="this.value=''"
+                maxlength="70"
+              />
+              <datalist id="country-name1">
+                <!-- <option value="Boston"></option>
+              <option value="Cambridge"></option>
+              <option value="London"></option>
+              <option value="Liverpool"></option> -->
+              </datalist>
+            </div>
+            <!-- input country -->
+            <div class="enter-each">
+              <div id="input2-div">
+                <label for="input-country2">To</label>
+              </div>
+
+              <input
+                id="input-country2"
+                type="text"
+                name="country"
+                list="country-name2"
+                placeholder="Select country"
+                onfocus="this.value=''"
+                maxlength="70"
+              />
+              <datalist id="country-name2">
+                <!-- <option value="Boston"></option>
+                    <option value="Cambridge"></option>
+                        <option value="London"></option>
+                            <option value="Liverpool"></option> -->
+              </datalist>
+            </div>
+          </div>
+
+          <div class="switch-heading">
+            <button id="btn-switch" title="switch">
+              <i class="fas fa-exchange-alt"></i>
+            </button>
+          </div>
+        </div>
+        <hr style="margin-top: 20px" />
+
+        <div id="converter-header">
+          <h2 id="converter">1 GBP = 1 GBP</h2>
+        </div>
+
+        <!-- INPUT CURRENCY AMOUNTS -->
+        <div class="input-currencies">
+          <div class="input-currency-only">
+            <input
+              type="number"
+              id="currency-only-one"
+              placeholder="0"
+              value="1"
+              maxlength="70"
+            />
+            <label id="label-curr-only-one" for="currency-only-one">GBP</label>
+          </div>
+
+          <div class="input-currency-only">
+            <input
+              type="number"
+              id="currency-only-two"
+              placeholder="0"
+              value="1"
+              disabled
+            />
+            <label id="label-curr-only-two" for="currency-only-two">GBP</label>
+          </div>
+        </div>
+        <!-- END INPUT CURRENCY AMOUNTS -->
+
+        <div class="all-info">
+          <div class="display-info">
+            <div id="currency-cont-one" class="each-country">
+              <img
+                src="https://restcountries.eu/data/gbr.svg"
+                class="flag"
+                id="flag1"
+              />
+              <!-- input amount for country -->
+              <input
+                type="number"
+                id="amount-one"
+                placeholder="0"
+                value="1"
+                maxlength="70"
+              />
+              <p id="p-currency1" class="p-currency">Currency:</p>
+              <p id="p-capital1">Capital City:</p>
+              <p id="p-code1">Calling code: +</p>
+              <p id="p-region1">Region:</p>
+            </div>
+
+            <div id="currency-cont-two" class="each-country">
+              <img
+                src="https://restcountries.eu/data/usa.svg"
+                class="flag"
+                id="flag2"
+              />
+              <!-- input amount for country -->
+              <input
+                type="number"
+                id="amount-two"
+                placeholder="0"
+                value="1"
+                disabled
+              />
+              <p id="p-currency2" class="p-currency">Currency:</p>
+              <p id="p-capital2">Capital City:</p>
+              <p id="p-code2">Calling code: +</p>
+              <p id="p-region2">Region:</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

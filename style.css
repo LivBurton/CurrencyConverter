@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+<style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+</style>
+/*  */
+
+*, ::after::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: rgb(30, 36, 35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  max-width: 500px;
+}
+
+.top-heading {
+  font-family: 'Barlow', sans-serif;
+  max-width: 500px;
+  margin: 30px 0px;
+  padding: 30px 20px;
+  background-color: rgb(4, 10, 10);
+  border-radius: 30px;
+}
+
+.top-heading h1 {
+  font-weight: 400;
+  font-size: 40px;
+  color: rgb(240, 242, 243);
+  padding: 15px 5px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 5px 10px;
+}
+
+.inner-container {
+  background-color: rgb(245, 245, 245);
+  background-size: cover;
+  border-bottom: black solid 5px;
+  padding-bottom: 50px;
+}
+
+.img-div {
+  background-color: rgb(4, 10, 10);
+  width: 100%;
+}
+
+#pound-img {
+  width: 10%;
+  background-color: white;
+  border-radius: 30px;
+  padding: 5px;
+  margin: 20px;
+}
+
+#action {
+  font-weight: bold;
+  margin: 30px 0;
+  font-size: 25px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.btn-container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.btn {
+  font-weight: bold;
+  background-color: hsla(184, 98%, 50%, 0.9);
+  border-radius: 5px;
+  border: none;
+  margin: 0 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: hsla(184, 98%, 50%, 0.3);
+}
+
+.btnClicked, .btnClicked:hover {
+  background-color: hsla(118, 97%, 58%, 0.8);
+  outline: none;
+}
+
+#input-country1, #input-country2 {
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.display-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enter-country {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.enter-country input {
+  font-size: 11px;
+  font-weight: bold;
+  margin-top: 20px;
+  width: 200px;
+  height: 30px;
+  margin: 40px 20px 20px 20px;
+}
+
+.countries-container {
+  display: flex;
+  width: 100%;
+}
+
+.enter-each {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+}
+
+.enter-each label {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.enter-each input {
+  margin: 5px 0 20px 0;
+  padding: 0;
+  align-self: center;
+}
+
+#btn-switch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 20px;
+  border: solid black 2px;
+  padding: 3px 20px;
+  cursor: pointer;
+  background-color: rgb(221, 220, 182);
+}
+
+.fa-exchange-alt {
+  font-size: 20px;
+}
+
+.each-country {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  width: 40%;
+  border: solid rgba(27, 27, 27, 0.3) 1px;
+  margin: 0 12px;
+  padding-top: 20px;
+  background-color: white;
+  border-radius: 4px;
+}
+
+#converter-header {
+  width: 100%;
+  text-align: center;
+}
+
+#converter {
+  width: 100%;
+}
+
+.flag {
+  width: 100px;
+  height: 50px;
+}
+
+.each-country p {
+  font-size: 16px;
+  margin: 5px;
+  width: 90%;
+}
+
+.p-currency {
+  border-top: solid rgb(27, 27, 27) 3px;
+  padding-top: 15px;
+}
+
+#amount-one, #currency-only-one {
+  cursor: pointer;
+}
+
+.display-info input, .input-currency-only input {
+  background-color: white;
+  border: black solid 1px;
+  border-radius: 3px;
+  width: 50%;
+  margin: 20px;
+  padding: 4px 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* FOR CURRENCY ONLY */
+
+.input-currencies {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.input-currency-only {
+  display: flex;
+  align-items: center;
+  margin: 0px 30px;
+  border: solid rgba(27, 27, 27, 0.3) 1px;
+}
+
+/* ------------conditional----------- */
+
+#converter-header:not(.selected) {
+  display: none;
+}
+
+.all-info:not(.selected) {
+  display: none;
+}
+
+.countries-container:not(.selected) {
+  display: none;
+}
+
+.switch-heading:not(.selected) {
+  display: none;
+}
+
+.input-currencies:not(.selected) {
+  display: none;
+}
+
+/*------------ MEDIA QUERIES----------------- */
+
+/* -----------600px----------- */
+
+@media (max-width: 600px) {
+  .countries-container {
+    width: 70%;
+  }
+  .container, .top-heading {
+    width: 90%;
+  }
+  .top-heading h1 {
+    font-size: 35px;
+  }
+  .enter-country {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 35px;
+  }
+  .countries-container {
+    flex-direction: column;
+  }
+  .enter-country input {
+    width: 100%;
+  }
+  .btn-container {
+    margin-bottom: 20px;
+  }
+  #action {
+    font-size: 20px;
+  }
+  /* currency only */
+  .input-currencies {
+    flex-direction: column;
+    align-items: center;
+  }
+  .input-currency-only {
+    margin: 20px;
+  }
+}
+
+/* -----------400px------------------ */
+
+@media (max-width: 400px) {
+  .top-heading {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-radius: 0;
+  }
+  .enter-country {
+    padding: 0 20px;
+  }
+  .each-country p {
+    font-size: 14px;
+  }
+}
