@@ -33,7 +33,7 @@ body {
   font-family: 'Barlow', sans-serif;
   max-width: 500px;
   margin: 30px 0px;
-  padding: 30px 20px;
+  padding: 30px 70px;
   background-color: rgb(4, 10, 10);
   border-radius: 30px;
 }
@@ -52,7 +52,8 @@ body {
   background-color: rgb(245, 245, 245);
   background-size: cover;
   border-bottom: black solid 5px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .img-div {
@@ -265,6 +266,9 @@ body {
   }
   .container, .top-heading {
     width: 90%;
+  }
+  .top-heading {
+    padding: 30px 0;
   }
   .top-heading h1 {
     font-size: 35px;
